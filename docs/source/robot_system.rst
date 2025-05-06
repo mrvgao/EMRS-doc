@@ -50,3 +50,16 @@ The data flow in the robot system:
 4. **Manipulation Commands**: TF-based pose estimation and MoveIt2 determine precise arm positions and grasping sequences.
 
 This robust architecture ensures reliable autonomous operation in dynamic environments.
+
+.. _Hardware:
+
+Hardware
+--------
+
+Turtlebot4 from Wyman
+
+
+.. _installation:
+
+Installation
+------------
