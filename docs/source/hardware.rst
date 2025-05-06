@@ -53,13 +53,21 @@ The hardware components are integrated into a cohesive system, leveraging ROS2 m
 Specifications Summary
 -----------------------
 
-| Component        | Specification Details                             |
-|------------------|---------------------------------------------------|
-| Mobile Robot     | ROS2 compatible, adequate payload and navigation  |
-| Robotic Arm      | MoveIt2 compatibility, precision, adequate reach  |
-| LiDAR Sensor     | High resolution, accurate distance measurement    |
-| RGBD Camera      | High resolution, real-time depth and RGB capture  |
-| Computing Unit   | GPU acceleration, robust processing capabilities  |
-| Power Supply     | Sufficient for continuous, extended operation     |
++-------------------+----------------------------------------------+
+| Component         | Specification Details                        |
++===================+==============================================+
+| Mobile Base       | Moderate payload and navigation              |
++-------------------+----------------------------------------------+
+| Robotic Arm       | High precision, adequate reach               |
++-------------------+----------------------------------------------+
+| Lidar             | Accurate distance measurement                |
++-------------------+----------------------------------------------+
+| RGBD Camera       | High resolution, real-time depth and RGB     |
++-------------------+----------------------------------------------+
+| Computing Unit    | GPU acceleration, robust processing          |
++-------------------+----------------------------------------------+
+| Power Supply      | Sufficient for continuous operation          |
++-------------------+----------------------------------------------+
+
 
 The chosen hardware ensures robust and reliable operation, supporting the robot’s autonomous environmental cleaning capabilities effectively.

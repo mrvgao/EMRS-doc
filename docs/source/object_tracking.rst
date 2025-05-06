@@ -61,4 +61,8 @@ Executive Packages
 ------------
 
 .. code-block:: bash
-Executive Commands
+$ <placeholder>
+
+Running Examples
+------------
+<Placeholder>

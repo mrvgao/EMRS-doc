@@ -64,3 +64,8 @@ Turtlebot4 from Wyman
 Installation
 ------------
 .. code-block:: bash
+$ <placeholder>
+
+Running Examples
+------------
+<Placeholder>
