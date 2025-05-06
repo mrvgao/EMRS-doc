@@ -3,6 +3,20 @@ Robot System Overview
 
 The **Patrolling Trash-Collecting Robot** integrates multiple hardware and software components to achieve autonomous environmental maintenance. This document provides an overview of the system architecture, its key subsystems, and the integration strategies employed.
 
+.. _Environment:
+
+Environment
+------------
+
+This project was developed with the following environment and platform:
+ * Ubuntu              22.04
+ * ROS2                humble
+ * ignition gazebo     6.16.0
+ * ignition service    11.4.1
+ * python              3.10.12
+ * c++                 11.4.0
+ * Eigen3              3.4.0-2ubuntu2
+
 
 System Architecture
 --------------------
