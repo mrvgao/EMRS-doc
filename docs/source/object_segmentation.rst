@@ -53,3 +53,9 @@ The combination of object segmentation and precise pose estimation ensures:
 - Increased effectiveness and precision during manipulation tasks.
 
 This segmentation and pose estimation pipeline significantly boosts the robot's ability to autonomously manage trash collection tasks efficiently.
+
+Executive Packages
+------------
+
+.. code-block:: bash
+Executive Commands

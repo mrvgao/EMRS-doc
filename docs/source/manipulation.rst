@@ -67,3 +67,9 @@ The integration of MoveIt2 provides:
 - Enhanced adaptability to diverse and dynamic environmental conditions.
 
 This robust manipulation framework significantly improves the autonomous functionality of the robot, allowing effective and efficient trash collection.
+
+Executive Packages
+------------
+
+.. code-block:: bash
+Executive Commands

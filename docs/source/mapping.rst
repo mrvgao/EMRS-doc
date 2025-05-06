@@ -42,3 +42,9 @@ Operational Workflow
 3. **Loop Detection and Optimization**: Periodically executes loop closure detection, optimizing the pose graph and enhancing map accuracy.
 
 The integrated use of RTAB-Map ensures reliable, efficient, and accurate navigation and localization capabilities for autonomous patrolling tasks.
+
+Executive Packages
+------------
+
+.. code-block:: bash
+Executive Commands

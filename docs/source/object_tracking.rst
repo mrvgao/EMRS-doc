@@ -56,3 +56,9 @@ This integration of TF-based tracking and PID control ensures:
 - Adaptability to dynamic environments and varying object positions
 
 The combined tracking and control framework significantly enhances the robot’s ability to autonomously and efficiently collect trash.
+
+Executive Packages
+------------
+
+.. code-block:: bash
+Executive Commands

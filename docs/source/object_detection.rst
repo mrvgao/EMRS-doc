@@ -54,3 +54,9 @@ Detected objects' bounding boxes and classes are further processed to:
 - Facilitate accurate grasping and manipulation sequences executed by the robotic arm via MoveIt2.
 
 This robust detection framework enables the robot to effectively maintain clean environments through efficient identification and collection of trash.
+
+Executive Packages
+------------
+
+.. code-block:: bash
+Executive Commands

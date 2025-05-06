@@ -46,5 +46,9 @@ Accurate localization is maintained through:
 
 This integrated navigation solution ensures the robot can autonomously patrol complex environments effectively and reliably.
 
+
 Executive Packages
 ------------
+
+.. code-block:: bash
+Executive Commands
