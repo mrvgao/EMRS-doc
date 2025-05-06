@@ -45,3 +45,6 @@ Accurate localization is maintained through:
 - **Adaptive Monte Carlo Localization (AMCL)**: Assists in localization refinement during navigation tasks.
 
 This integrated navigation solution ensures the robot can autonomously patrol complex environments effectively and reliably.
+
+Executive Packages
+------------
