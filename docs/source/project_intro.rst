@@ -38,7 +38,8 @@ The real-robot system is built using the following hardware:
 .. image:: /images/physical-robot-whole.jpeg
    :alt: Physical Robot
    :align: center
-   :scale: 25%
+   :width: 450px
+   :height: 700px
 
 .. _simulation_env:
 
