@@ -122,21 +122,23 @@ Running the System
 
 In the next section :ref:`runnable`, we list all the executive packages and commands to run the system. The commands are categorized into simulation and real robot execution.
 
-+--------------+-------------------------+
-| Executive     | Function               |
-+==============+=========================+
-| Common Setup | Clone the project and set the workspace      |
-+--------------+-------------------------+
-|  Robot Description |  Unified URDF model combining TurtleBot4 base, OpenManipulator-X arm, 2D LiDAR, and Intel RealSense camera.         |
-+--------------+-------------------------+
-|  Gazebo Simulation |  Physics-based simulation in custom apartment and Wyman lab worlds.         |
-+--------------+-------------------------+
-| Hand-Eye Calibration | |
-+--------------+-------------------------+
-|  SLAM |   Real time mapping and localization      |
-+--------------+-------------------------+
-|  Patrol |  Executes patrol routine         |
-+--------------+-------------------------+
-|  Pick and Place            | MoveIt2-based pick-and-place functionality for trash collection. |
-+--------------+-------------------------+
+.. list-table:: Executable Packages
+   :widths: 20 50
+   :header-rows: 1
 
+   * - Executive
+     - Function
+   * - Common Setup
+     - Clone the project and set the workspace
+   * - Robot Description
+     - Unified URDF model combining TurtleBot4 base, OpenManipulator-X, and camera
+   * - Gazebo Simulation
+     - Physics-based simulation in custom apartment and Wyman lab
+   * - Hand-Eye Calibration
+     - (leave empty or describe)
+   * - SLAM
+     - Real-time mapping and localization
+   * - Patrol
+     - Executes patrol routine
+   * - Pick and Place
+     - MoveIt2-based pick-and-place functionality for trash collection
