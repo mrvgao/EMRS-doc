@@ -53,12 +53,8 @@ For development and testing, the following simulation tools and packages are use
 - **Nav2**: Autonomous navigation stack.
 - **Custom URDFs**: Combining TurtleBot4, sensors, and OpenManipulator into a single model.
 
-.. image:: /images/physical-robot-whole.jpeg
-   :alt: Physical Robot
-   :align: center
-   :scale: 50%
-
 **Hand-Eye Calibration**
+
 .. image:: /images/eye-calibration.png
    :alt: Hand-Eye Calibration
    :align: center
