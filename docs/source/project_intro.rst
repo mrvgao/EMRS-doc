@@ -38,7 +38,7 @@ The real-robot system is built using the following hardware:
 .. image:: /images/physical-robot-whole.jpeg
    :alt: Physical Robot
    :align: center
-   :scale: 50%
+   :scale: 25%
 
 .. _simulation_env:
 
@@ -58,7 +58,7 @@ For development and testing, the following simulation tools and packages are use
 .. image:: /images/eye-calibration.png
    :alt: Hand-Eye Calibration
    :align: center
-   :scale: 50%
+   :scale: 100%
 
 **SLAM**
 
@@ -66,8 +66,8 @@ Watch the SLAM workflow:
 
 .. image:: /images/mapping.gif
    :alt: Map Building Demo
-   :width: 640
-   :height: 360
+   :align: center
+   :scale: 100%
 
 .. _software_env:
 
@@ -157,7 +157,7 @@ Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
 .. image:: /images/patrolling.gif
    :alt: Robot Description
    :align: center
-   :scale: 50%
+   :scale: 100%
 
 **To visualize and test manipulation:**
 
@@ -168,6 +168,5 @@ Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
 **Manipulation in Real Robot **
 
 .. image:: images/manipulator.gif
-   :height: 450px
-   :width: 800px
-   :alt: manipulator
+   :align: center
+   :scale: 100%

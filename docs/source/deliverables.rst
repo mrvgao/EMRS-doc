@@ -11,7 +11,7 @@ Simulated Functionality (`sim` branch)
 .. image:: /images/placeholder.png
    :alt: Robot Description
    :align: center
-   :scale: 50%
+   :scale: 100%
 
 - **Description**: Unified URDF model combining TurtleBot4 base, OpenManipulator-X arm, 2D LiDAR, and Intel RealSense camera.
 - **Launch Command**::
@@ -31,7 +31,7 @@ Simulated Functionality (`sim` branch)
 .. image:: /images/gazebo_gif.gif
    :alt: Gazebo Simulation
    :align: center
-   :scale: 50%
+   :scale: 100%
 
 - **Description**: Physics-based simulation in custom apartment and Wyman lab worlds.
 - **Launch Command**::
@@ -51,7 +51,7 @@ Simulated Functionality (`sim` branch)
 .. image:: /images/simulation.gif
    :alt: Patrolling Behavior
    :align: center
-   :scale: 50%
+   :scale: 100%
 
 - **Description**: Waypoint-based patrol using Nav2 behavior tree.
 - **Parameters**: Defined in `config/patrol_waypoints.yaml`.
@@ -71,7 +71,7 @@ Simulated Functionality (`sim` branch)
 .. image:: /images/eye-calibration.png
    :alt: Hand-Eye Calibration
    :align: center
-   :scale: 50%
+   :scale: 100%
 
 - **Description**: Calibrates end-effector to camera transform using MoveIt calibration pipeline and ArUco board.
 - **Procedure**:
@@ -87,7 +87,7 @@ Real-World Deployment (`real` branch)
 .. image:: /images/physical-robot-whole.jpeg
    :alt: Physical Robot
    :align: center
-   :scale: 50%
+   :scale: 25%
 
 - **Description**: Integration on TurtleBot4 with OpenManipulator-X, LiDAR, RealSense.
 - **Driver Nodes**:
@@ -100,7 +100,7 @@ Real-World Deployment (`real` branch)
 .. image:: /images/patrolling.gif
    :alt: Real Patrol
    :align: center
-   :scale: 50%
+   :scale: 100%
 
 - **Description**: Executes identical patrol routine on hardware.
 - **Launch Command**::
@@ -119,7 +119,7 @@ Real-World Deployment (`real` branch)
 .. image:: /images/real_world_a.gif
    :alt: Calibration Verification
    :align: center
-   :scale: 50%
+   :scale: 100%
 
 - **Description**: Verifies hand-eye and mapping accuracy in physical environment.
 - **Procedure**:
