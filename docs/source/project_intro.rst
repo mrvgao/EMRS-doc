@@ -26,6 +26,20 @@ We provide two branches for different use cases:
    :height: 450px
 
 .. _hardware_used:
+.. _software_env:
+
+Software Environment
+---------------------
+
+The project was developed and tested with the following software environment:
+
+- **Ubuntu**: 22.04
+- **ROS2**: Humble
+- **Ignition Gazebo**: 6.16.0
+- **Ignition Services**: 11.4.1
+- **Python**: 3.10.12
+- **C++**: 11.4.0
+- **Eigen3**: 3.4.0
 
 Hardware Used
 -------------
@@ -76,20 +90,6 @@ Watch the SLAM workflow:
    :align: center
    :scale: 100%
 
-.. _software_env:
-
-Software Environment
----------------------
-
-The project was developed and tested with the following software environment:
-
-- **Ubuntu**: 22.04
-- **ROS2**: Humble
-- **Ignition Gazebo**: 6.16.0
-- **Ignition Services**: 11.4.1
-- **Python**: 3.10.12
-- **C++**: 11.4.0
-- **Eigen3**: 3.4.0
 
 .. _installation:
 
