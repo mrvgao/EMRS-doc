@@ -55,8 +55,6 @@ The real-robot system is built using the following hardware:
 - **Power Supply**: Battery integrated into TurtleBot4
 
 
-
-
 .. _simulation_env:
 
 Simulation Environment

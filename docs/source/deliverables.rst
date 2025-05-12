@@ -96,7 +96,8 @@ Real-World Deployment (`real` branch)
   - `open_manipulator_node`: controller for arm joints
   - Sensor drivers for LiDAR and RealSense
 
-**SLAM**
+SLAM
+____
 
 .. raw:: html
 
@@ -108,9 +109,8 @@ Real-World Deployment (`real` branch)
 
       ros2 launch turtlebot4_manipulator_navigation navigate.launch.py map_name:=r_apt.yaml
 
-
-
-**Navigation & Patrolling**
+Navigation & Patrolling
+________________________
 
 .. raw:: html
 
@@ -128,6 +128,22 @@ Real-World Deployment (`real` branch)
   - Full Nav2 stack (`planner_server`, `controller_server`, `lifecycle_manager_navigation`)
   - `patrol_robot_node`
   - Hardware sensors publishing to ROS2 topics
+
+Pick and Place
+________________________
+- **Launch Command**::
+
+   .. code-block:: bash
+
+      ros2 launch pick_place pick_place.launch.py
+
+
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/eReHZW7ntQQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 
 Common Setup
 -------------
