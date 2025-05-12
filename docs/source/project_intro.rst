@@ -70,7 +70,6 @@ For development and testing, the following simulation tools and packages are use
 - **Custom URDFs**: Combining TurtleBot4, sensors, and OpenManipulator into a single model.
 
 .. _installation:
-
 Installation Instructions
 -------------------------
 

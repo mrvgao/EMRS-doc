@@ -12,7 +12,7 @@ Common Setup
 
 **Workspace Initialization**
 
-After the environment installing in the :ref:`previous section <project_intro#_software_env>`, create a workspace and clone the repository:
+After the environment installing in the :ref:`installation`, create a workspace and clone the repository:
 
 .. code-block:: bash
 
