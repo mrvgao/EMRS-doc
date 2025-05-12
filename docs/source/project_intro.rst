@@ -55,11 +55,7 @@ The real-robot system is built using the following hardware:
 - **Power Supply**: Battery integrated into TurtleBot4
 
 
-.. image:: /images/hardware.jpg
-   :alt: Physical Robot
-   :align: center
-   :width: 800px
-   :height: 450px
+
 
 .. _simulation_env:
 

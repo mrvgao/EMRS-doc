@@ -84,16 +84,24 @@ Real-World Deployment (`real` branch)
 
 **Hardware Setup & Drivers**
 
-.. image:: /images/physical-robot-whole.jpeg
+.. image:: /images/hardware.jpg
    :alt: Physical Robot
    :align: center
-   :scale: 25%
+   :width: 800px
+   :height: 450px
 
 - **Description**: Integration on TurtleBot4 with OpenManipulator-X, LiDAR, RealSense.
 - **Driver Nodes**:
   - `turtlebot4_node`: ROS2 driver for Create3 base
   - `open_manipulator_node`: controller for arm joints
   - Sensor drivers for LiDAR and RealSense
+
+**SLAM**
+
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/7yhlDjgahV4?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 **Navigation & Patrolling**
 
