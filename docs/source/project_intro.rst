@@ -74,23 +74,6 @@ For development and testing, the following simulation tools and packages are use
 - **Nav2**: Autonomous navigation stack.
 - **Custom URDFs**: Combining TurtleBot4, sensors, and OpenManipulator into a single model.
 
-**Hand-Eye Calibration**
-
-.. image:: /images/eye-calibration.png
-   :alt: Hand-Eye Calibration
-   :align: center
-   :scale: 50%
-
-**SLAM**
-
-Watch the SLAM workflow:
-
-.. image:: /images/mapping.gif
-   :alt: Map Building Demo
-   :align: center
-   :scale: 100%
-
-
 .. _installation:
 
 Installation Instructions
