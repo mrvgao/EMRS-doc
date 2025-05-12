@@ -24,10 +24,7 @@ Key Functionalities:
 - Robotic Arm Manipulation (MoveIt2, Pick-and-Place)
 
 
-Documentation Structure
------------------------
-
-This documentation is structured into several sections, each detailing specific aspects of the robot’s functionality and implementation. Users and developers can navigate through these sections to understand and replicate the system, extend capabilities, or adapt the platform for related applications.
-
-.. note::
-   All project tasks and features described are assumed to be fully implemented and tested in simulation and real-world environments.
+.. image:: images/manipulator.gif
+   :height: 450px
+   :width: 800px
+   :alt: manipulator
