@@ -5,7 +5,7 @@ Patrolling Trash-Collecting Robot
    :maxdepth: 2
    :caption: Project Documentation
 
-   robot_system
+   project_intro
    navigation
    mapping
    object_detection
@@ -22,7 +22,8 @@ The **Patrolling Trash-Collecting Robot** project aims to develop an autonomous 
 
 Key Functionalities:
 
-- Autonomous Navigation and Mapping (Nav2, RTAB-Map)
+- Autonomous Navigation and Mapping (Nav2)
+- Eye-Hand Calibration
 - Real-time Trash Detection and Tracking (YOLO, TF frames)
 - Object Segmentation and Pose Estimation (Point Cloud Analysis)
 - Robotic Arm Manipulation (MoveIt2, Pick-and-Place)
