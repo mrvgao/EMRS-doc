@@ -1,152 +1,154 @@
 Deliverables and Execution Instructions
 ============
+Deliverables
+============
 
-This section summarizes the **completed deliverables** of the Patrolling Trash-Collecting Robot project. Refer to the **Project Introduction** for full system overview, hardware details, and environment setup.
+This section lists the **completed deliverables** of the Patrolling Trash-Collecting Robot project, organized by functionality. For system overview and environment setup, see the **Project Introduction**.
 
-Simulation (`sim` branch)
---------------------------
+Simulated Functionality (`sim` branch)
+----------------------------------------
 
-.. list-table:: Simulation Deliverables
-   :header-rows: 0
+**Robot Description & Visualization**
 
-   * - .. image:: /images/placeholder.png
-         :alt: Robot Description
-         :align: center
-         :scale: 50%
-     - **Robot Description & Visualization**
+.. image:: /images/placeholder.png
+   :alt: Robot Description
+   :align: center
+   :scale: 50%
 
-       URDF includes TurtleBot4 base, OpenManipulator-X arm, LiDAR & RealSense.
+- **Description**: Unified URDF model combining TurtleBot4 base, OpenManipulator-X arm, 2D LiDAR, and Intel RealSense camera.
+- **Launch Command**::
 
-       **Launch** RViz:
-       .. code-block:: bash
+  ros2 launch turtlebot4_manipulator_description \
+    t4_manipulator_description.launch.py rviz:=true
 
-          ros2 launch turtlebot4_manipulator_description \
-            t4_manipulator_description.launch.py rviz:=true
+- **Key Nodes**:
+  - `robot_state_publisher`: publishes TF tree for robot links
+  - `joint_state_publisher_gui`: interactive joint position control
+  - `rviz2`: 3D visualization of robot and sensors
 
-       **Key Nodes**:
-       - `robot_state_publisher`: broadcasts TF for all links
-       - `joint_state_publisher_gui`: interactive joint control
-       - `rviz2`: visualization
+**Ignition Gazebo Simulation**
 
-   * - .. image:: /images/hardware_architecture.png
-         :alt: Robot Description
-         :align: center
-         :scale: 50%
-     - **Ignition Gazebo Testbed**
+.. image:: /images/gazebo_gif.gif
+   :alt: Gazebo Simulation
+   :align: center
+   :scale: 50%
 
-       Simulation world with apartment & Wyman lab environments (SDF).
+- **Description**: Physics-based simulation in custom apartment and Wyman lab worlds.
+- **Launch Command**::
 
-       **Launch** Ignition + Nav2:
-       .. code-block:: bash
+  ros2 launch turtlebot4_manipulator_ignition \
+    t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
 
-          ros2 launch turtlebot4_manipulator_ignition \
-            t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
+- **Key Nodes**:
+  - `ign_gazebo`: simulation server and physics engine
+  - `ros_ign_bridge`: bridges ROS2 topics/services to Ignition
+  - Nav2 nodes (`controller_server`, `planner_server`, `lifecycle_manager_navigation`)
 
-       **Key Nodes**:
-       - `nav2_controller_server`: path following
-       - `nav2_planner_server`: global planning
-       - `lifecycle_manager_navigation`: manages Nav2 lifecycle
-       - `ign_gazebo`: physics + sensor plugins
+**Autonomous Patrolling**
 
-   * - .. image:: /images/gazebo_gif.gif
-         :alt: Ignition Gazebo
-         :align: center
-         :scale: 50%
-     - **Autonomous Patrolling**
+.. image:: /images/simulation.gif
+   :alt: Patrolling Behavior
+   :align: center
+   :scale: 50%
 
-       Waypoint patrol via Nav2 behavior tree:
-       - Waypoints defined in `config/patrol_waypoints.yaml`
-       - Behavior configured in `patrol.launch.py`
+- **Description**: Waypoint-based patrol using Nav2 behavior tree.
+- **Parameters**: Defined in `config/patrol_waypoints.yaml`.
+- **Launch Command**::
 
-       **Execute** patrol:
-       .. code-block:: bash
+  ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
 
-          ros2 launch turtlebot4_manipulator_navigation \
-            patrol.launch.py
+- **Key Nodes**:
+  - `patrol_robot_node`: reads waypoints and publishes goals
+  - `bt_navigator`: executes behavior tree for navigation
+  - `waypoint_follower`: follows sequential goals
 
-       **Key Nodes**:
-       - `patrol_robot_node`: reads and publishes waypoints
-       - `bt_navigator`: ROS2 Behavior Tree executor
-       - `waypoint_follower`: sequential goal execution
+**Hand-Eye Calibration**
 
-   * - .. image:: /images/simulation.gif
-         :alt: Autonomous Patrolling
-         :align: center
-         :scale: 50%
-     - **Hand-Eye Calibration**
+.. image:: /images/eye-calibration.png
+   :alt: Hand-Eye Calibration
+   :align: center
+   :scale: 50%
 
-       Calibrated camera-to-end-effector transform using MoveIt Calibration:
-       - Runs `moveit_calibration` pipeline
-       - Uses ArUco marker board for target detection
-       - Stores result as a static TF via `static_transform_publisher`
+- **Description**: Calibrates end-effector to camera transform using MoveIt calibration pipeline and ArUco board.
+- **Procedure**:
+  1. Launch calibration pipeline via MoveIt.
+  2. Capture marker poses and compute transform.
+  3. Publish static TF with `static_transform_publisher`.
 
-   * - .. image:: /images/eye-calibration.png
-         :alt: Hand-Eye Calibration
-         :align: center
-         :scale: 50%
-     - **Hardware Deployment**
+Real-World Deployment (`real` branch)
+-------------------------------------
 
-       Real-world integration:
-       - TurtleBot4 base, OpenManipulator-X arm
-       - 2D LiDAR + Intel RealSense D435
-       - Verified ROS2 drivers & sensor topics
+**Hardware Setup & Drivers**
 
-   * - .. image:: /images/real_t4.gif
-         :alt: Hardware Patrol
-         :align: center
-         :scale: 50%
-     - **Navigation & Patrolling on Hardware**
+.. image:: /images/physical-robot-whole.jpeg
+   :alt: Physical Robot
+   :align: center
+   :scale: 50%
 
-       Identical launch to simulation:
-       .. code-block:: bash
+- **Description**: Integration on TurtleBot4 with OpenManipulator-X, LiDAR, RealSense.
+- **Driver Nodes**:
+  - `turtlebot4_node`: ROS2 driver for Create3 base
+  - `open_manipulator_node`: controller for arm joints
+  - Sensor drivers for LiDAR and RealSense
 
-          ros2 launch turtlebot4_manipulator_navigation \
-            patrol.launch.py
+**Navigation & Patrolling**
 
-       **Key Nodes**:
-       - Nav2 stack nodes (planner, controller, lifecycle)
-       - `patrol_robot_node`
-       - real sensor drivers
+.. image:: /images/real_t4.gif
+   :alt: Real Patrol
+   :align: center
+   :scale: 50%
 
-   * - .. image:: /images/real_world_a.gif
-         :alt: Calibration Verification
-         :align: center
-         :scale: 50%
-     - **Calibration & Verification**
+- **Description**: Executes identical patrol routine on hardware.
+- **Launch Command**::
 
-       - Verified hand-eye transform on physical setup
-       - Tested pick poses with MoveIt2 planning in real environment
+  ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
 
-Common Steps
-------------
+- **Key Nodes**:
+  - Full Nav2 stack (`planner_server`, `controller_server`, `lifecycle_manager_navigation`)
+  - `patrol_robot_node`
+  - Hardware sensors publishing to ROS2 topics
 
-.. list-table:: Workspace & Branch Setup
-   :header-rows: 0
+**Calibration & Verification**
 
-   * - .. image:: /images/placeholder.png
-         :alt: Workspace Setup
-         :align: center
-         :scale: 50%
-     - **Workspace Initialization**
+.. image:: /images/real_world_a.gif
+   :alt: Calibration Verification
+   :align: center
+   :scale: 50%
 
-       .. code-block:: bash
+- **Description**: Verifies hand-eye and mapping accuracy in physical environment.
+- **Procedure**:
+  - Run mapping in real environment (RTAB-Map integration).
+  - Test grasp poses in MoveIt2 RViz for accuracy.
 
-          mkdir -p ~/rsp_ws/src && cd ~/rsp_ws/src
-          git clone https://github.com/mrvgao/rsp-proj.git
-          cd ~/rsp_ws
-          rosdep install --from-paths src --ignore-src -r -y
-          colcon build --symlink-install && source install/setup.bash
+Common Setup
+-------------
 
-   * - .. image:: /images/placeholder.png
-         :alt: Branch Selection
-         :align: center
-         :scale: 50%
-     - **Branch Selection**
+**Workspace Initialization**
 
-       .. code-block:: bash
+.. image:: /images/placeholder.png
+   :alt: Workspace Initialization
+   :align: center
+   :scale: 50%
 
-          cd ~/rsp_ws/src/rsp-proj
-          git checkout sim   # for simulation
-          git checkout real  # for real hardware deployment
+.. code-block:: bash
 
-All source packages and launch configurations are available in the [`rsp-proj`](https://github.com/jhu-rsp/rsp-project-team-emrs) repository under the `sim` and `real` branches respectively. For detailed architecture and usage, see the **Project Introduction**, **Hardware**, **Mapping**, **Navigation**, and **Manipulation** chapters.
+   mkdir -p ~/rsp_ws/src && cd ~/rsp_ws/src
+   git clone https://github.com/jhu-rsp/rsp-project-team-emrs
+   cd ~/rsp_ws
+   rosdep install --from-paths src --ignore-src -r -y
+   colcon build --symlink-install && source install/setup.bash
+
+**Branch Selection**
+
+.. image:: /images/placeholder.png
+   :alt: Branch Selection
+   :align: center
+   :scale: 50%
+
+.. code-block:: bash
+
+   cd ~/rsp_ws/src/rsp-proj
+   git checkout sim   # for simulation
+   git checkout real  # for hardware deployment
+
+All source packages and full launch configurations are maintained in the [`rsp-proj`](https://github.com/jhu-rsp/rsp-project-team-emrs) repository under the `sim` and `real` branches respectively. Refer to individual chapters (Mapping, Navigation, Manipulation) for deeper details on each subsystem.

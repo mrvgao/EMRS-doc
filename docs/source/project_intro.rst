@@ -62,6 +62,8 @@ For development and testing, the following simulation tools and packages are use
 
 **Map Building**
 
+Watch the mapping workflow:
+
 .. image:: /images/mapping.gif
    :alt: Map Building Demo
    :width: 640
@@ -115,7 +117,7 @@ Follow the steps below to install required dependencies and set up the workspace
 
    mkdir -p ~/rsp_ws/src
    cd ~/rsp_ws/src
-   git clone https://github.com/jhu-rsp/rsp-project-team-emrs
+   git clone https://github.com/mrvgao/rsp-proj.git
 
    cd ~/rsp_ws
    rosdep install --from-paths src --ignore-src -r -y
@@ -168,7 +170,6 @@ To visualize and test manipulation routines in simulation:
    ros2 launch turtlebot4_manipulator_navigation manipulation.launch.py
 
 **Manipulation **
-
 
 .. image:: images/manipulator.gif
    :height: 450px
