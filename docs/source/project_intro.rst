@@ -62,8 +62,6 @@ For development and testing, the following simulation tools and packages are use
 
 **Map Building**
 
-Watch the mapping workflow:
-
 .. image:: /images/mapping.gif
    :alt: Map Building Demo
    :width: 640

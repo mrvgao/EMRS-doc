@@ -6,13 +6,8 @@ Patrolling Trash-Collecting Robot
    :caption: Project Documentation
 
    project_intro
-   navigation
-   mapping
-   object_detection
-   object_tracking
-   object_segmentation
-   manipulation
-   hardware
+   deliverables
+   challenges_and_future_works
 
 
 Project Overview
