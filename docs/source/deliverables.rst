@@ -44,7 +44,7 @@ All source packages and full launch configurations are maintained in the [`rsp-p
 Robot Description & Visualization
 __________________________________
 
-.. image:: /images/robot-description.png
+.. image:: /images/robot-description-w.png
    :alt: Robot Description
    :align: center
    :scale: 100%
