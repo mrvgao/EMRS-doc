@@ -24,6 +24,13 @@ Key Functionalities:
 - Robotic Arm Manipulation (MoveIt2, Pick-and-Place)
 
 
+.. raw:: html
+
+    <iframe src="https://drive.google.com/file/d/1LkreGzrz9XRGMC6K78v98LoNlPB3XTe7/view?usp=drive_link"
+            width="640" height="480" allow="autoplay">
+    </iframe>
+
+
 .. image:: images/manipulator.gif
    :height: 450px
    :width: 800px
