@@ -115,7 +115,7 @@ Follow the steps below to install required dependencies and set up the workspace
 
    mkdir -p ~/rsp_ws/src
    cd ~/rsp_ws/src
-   git clone https://github.com/mrvgao/rsp-proj.git
+   git clone https://github.com/jhu-rsp/rsp-project-team-emrs
 
    cd ~/rsp_ws
    rosdep install --from-paths src --ignore-src -r -y
