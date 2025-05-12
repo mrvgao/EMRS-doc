@@ -165,13 +165,6 @@ Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
 
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/KnCYKSxr5mk?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-.. image:: images/manipulator.gif
-   :height: 450px
-   :width: 800px
-   :alt: manipulator
-
-
 **To visualize and test manipulation:**
 
 .. code-block:: bash
@@ -180,6 +173,6 @@ Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
 
 **Manipulation in Real Robot **
 
-.. image:: images/manipulator.gif
-   :align: center
-   :scale: 100%
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/eReHZW7ntQQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
