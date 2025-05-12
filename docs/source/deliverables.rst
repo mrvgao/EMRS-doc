@@ -114,18 +114,6 @@ Real-World Deployment (`real` branch)
   - `patrol_robot_node`
   - Hardware sensors publishing to ROS2 topics
 
-**Calibration & Verification**
-
-.. image:: /images/real_world_a.gif
-   :alt: Calibration Verification
-   :align: center
-   :scale: 100%
-
-- **Description**: Verifies hand-eye and mapping accuracy in physical environment.
-- **Procedure**:
-  - Run mapping in real environment (RTAB-Map integration).
-  - Test grasp poses in MoveIt2 RViz for accuracy.
-
 Common Setup
 -------------
 
