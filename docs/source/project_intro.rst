@@ -154,12 +154,12 @@ Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
 
 **Patrolling Demo**
 
-.. video:: /videos/patrol_demo.mp4
+.. imgage:: /images/placeholder.png
    :alt: Patrolling Demo
    :width: 640
    :height: 360
 
-To visualize and test manipulation:
+**To visualize and test manipulation:**
 
 .. code-block:: bash
 
