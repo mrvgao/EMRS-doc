@@ -19,6 +19,12 @@ We provide two branches for different use cases:
 - **`sim` branch**: Implements the system in a simulated environment using **Ignition Gazebo**, allowing testing and development without hardware.
 - **`real` branch**: Deploys the same architecture on a physical **TurtleBot4** platform, integrating real sensors and actuators.
 
+.. image:: /images/framework-of-rsp.jpg
+   :alt: Framework of Patrolling Trash-Collecting Robot
+   :align: center
+   :width: 800px
+   :height: 450px
+
 .. _hardware_used:
 
 Hardware Used
