@@ -115,6 +115,25 @@ Follow the steps below to install required dependencies and set up the workspace
    cd ~/rsp_ws/src/rsp-proj
    git checkout sim   # or 'real' for hardware setup
 
+Running Examples
+________________
+
+In the following sections, we provide examples of how to run the system in both simulation and real robot environments. The commands are categorized into different functionalities such as navigation, mapping, manipulation, and more.
+A complete demo, which contains two steps,  for this project are listed in the following:
+
+1. **Patrol**: The robot autonomously patrols a designated area, if it detects target, it will stop and wait for the next step.
+
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/KnCYKSxr5mk?autoplay=1&mute=1" title="NAV TO BLOCK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+2. **Pick And Place**: The robot will pick the object and place it on its body.
+
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/eReHZW7ntQQ?autoplay=1&mute=1" title="NAV TO BLOCK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 .. _execution:
 
 Running the System
