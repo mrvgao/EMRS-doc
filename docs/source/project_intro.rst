@@ -64,7 +64,7 @@ For development and testing, the following simulation tools and packages are use
 
 Watch the mapping workflow:
 
-.. video:: /videos/building-map.mp4
+.. image:: /images/mapping.gif
    :alt: Map Building Demo
    :width: 640
    :height: 360
@@ -171,7 +171,7 @@ To visualize and test manipulation routines in simulation:
 
 **Manipulation Demo**
 
-.. video:: /videos/manipulator.mov
+.. image:: /images/manipulator.gif
    :alt: Manipulation Demo
    :width: 640
    :height: 360
