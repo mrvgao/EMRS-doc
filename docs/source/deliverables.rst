@@ -97,10 +97,10 @@ Real-World Deployment (`real` branch)
 
 **Navigation & Patrolling**
 
-.. image:: /images/patrolling.gif
-   :alt: Real Patrol
-   :align: center
-   :scale: 100%
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/bnXM05LB094?autoplay=1&mute=1" title="Patrolling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 - **Description**: Executes identical patrol routine on hardware.
 - **Launch Command**::
