@@ -1,5 +1,3 @@
-Deliverables and Execution Instructions
-============
 Deliverables
 ============
 
@@ -18,8 +16,10 @@ Simulated Functionality (`sim` branch)
 - **Description**: Unified URDF model combining TurtleBot4 base, OpenManipulator-X arm, 2D LiDAR, and Intel RealSense camera.
 - **Launch Command**::
 
-  ros2 launch turtlebot4_manipulator_description \
-    t4_manipulator_description.launch.py rviz:=true
+   .. code-block:: bash
+
+      ros2 launch turtlebot4_manipulator_description \
+        t4_manipulator_description.launch.py rviz:=true
 
 - **Key Nodes**:
   - `robot_state_publisher`: publishes TF tree for robot links
@@ -36,8 +36,10 @@ Simulated Functionality (`sim` branch)
 - **Description**: Physics-based simulation in custom apartment and Wyman lab worlds.
 - **Launch Command**::
 
-  ros2 launch turtlebot4_manipulator_ignition \
-    t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
+   .. code-block:: bash
+
+      ros2 launch turtlebot4_manipulator_ignition \
+        t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
 
 - **Key Nodes**:
   - `ign_gazebo`: simulation server and physics engine
@@ -55,7 +57,9 @@ Simulated Functionality (`sim` branch)
 - **Parameters**: Defined in `config/patrol_waypoints.yaml`.
 - **Launch Command**::
 
-  ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
+   .. code-block:: bash
+
+      ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
 
 - **Key Nodes**:
   - `patrol_robot_node`: reads waypoints and publishes goals
@@ -101,7 +105,9 @@ Real-World Deployment (`real` branch)
 - **Description**: Executes identical patrol routine on hardware.
 - **Launch Command**::
 
-  ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
+   .. code-block:: bash
+
+      ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
 
 - **Key Nodes**:
   - Full Nav2 stack (`planner_server`, `controller_server`, `lifecycle_manager_navigation`)
