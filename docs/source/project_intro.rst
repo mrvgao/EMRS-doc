@@ -54,7 +54,7 @@ For development and testing, the following simulation tools and packages are use
 - **Custom URDFs**: Combining TurtleBot4, sensors, and OpenManipulator into a single model.
 
 **Hand-Eye Calibration**
-.. image:: /images/eye-calibration.jpeg
+.. image:: /images/eye-calibration.png
    :alt: Hand-Eye Calibration
    :align: center
    :scale: 50%
