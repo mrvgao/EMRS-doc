@@ -103,19 +103,6 @@ ___________________________________
   - `bt_navigator`: executes behavior tree for navigation
   - `waypoint_follower`: follows sequential goals
 
-Hand-Eye Calibration
-_____________________
-
-.. image:: /images/eye-calibration.png
-   :alt: Hand-Eye Calibration
-   :align: center
-   :scale: 50%
-
-- **Description**: Calibrates end-effector to camera transform using MoveIt calibration pipeline and ArUco board.
-- **Procedure**:
-  1. Launch calibration pipeline via MoveIt.
-  2. Capture marker poses and compute transform.
-  3. Publish static TF with `static_transform_publisher`.
 
 Real-World Deployment (`real` branch)
 -------------------------------------
@@ -133,6 +120,22 @@ Real-World Deployment (`real` branch)
   - `turtlebot4_node`: ROS2 driver for Create3 base
   - `open_manipulator_node`: controller for arm joints
   - Sensor drivers for LiDAR and RealSense
+
+
+Hand-Eye Calibration
+_____________________
+
+.. image:: /images/eye-calibration.png
+   :alt: Hand-Eye Calibration
+   :align: center
+   :scale: 50%
+
+- **Description**: Calibrates end-effector to camera transform using MoveIt calibration pipeline and ArUco board.
+- **Procedure**:
+  1. Launch calibration pipeline via MoveIt.
+  2. Capture marker poses and compute transform.
+  3. Publish static TF with `static_transform_publisher`.
+
 
 SLAM
 ____
