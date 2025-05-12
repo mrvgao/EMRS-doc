@@ -136,7 +136,7 @@ Follow the steps below to install required dependencies and set up the workspace
 Running the System
 -------------------
 
-### 1. Simulation
+###1. Simulation
 
 To launch the robot in Ignition with localization and Nav2 enabled:
 
@@ -161,7 +161,7 @@ Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
    :width: 640
    :height: 360
 
-### 2. Manipulation
+###2. Manipulation
 
 To visualize and test manipulation routines in simulation:
 
