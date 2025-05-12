@@ -169,7 +169,7 @@ To visualize and test manipulation routines in simulation:
 
    ros2 launch turtlebot4_manipulator_navigation manipulation.launch.py
 
-**Manipulation Demo**
+**Manipulation **
 
 
 .. image:: images/manipulator.gif
