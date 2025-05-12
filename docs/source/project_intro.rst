@@ -58,7 +58,7 @@ For development and testing, the following simulation tools and packages are use
 .. image:: /images/eye-calibration.png
    :alt: Hand-Eye Calibration
    :align: center
-   :scale: 100%
+   :scale: 50%
 
 **SLAM**
 

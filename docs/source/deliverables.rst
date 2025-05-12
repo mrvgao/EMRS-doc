@@ -71,7 +71,7 @@ Simulated Functionality (`sim` branch)
 .. image:: /images/eye-calibration.png
    :alt: Hand-Eye Calibration
    :align: center
-   :scale: 100%
+   :scale: 50%
 
 - **Description**: Calibrates end-effector to camera transform using MoveIt calibration pipeline and ArUco board.
 - **Procedure**:
