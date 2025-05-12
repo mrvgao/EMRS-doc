@@ -7,6 +7,7 @@ Simulated Functionality (`sim` branch)
 ----------------------------------------
 
 
+.. _runnable:
 Common Setup
 -------------
 
@@ -43,7 +44,7 @@ All source packages and full launch configurations are maintained in the [`rsp-p
 Robot Description & Visualization
 __________________________________
 
-.. image:: /images/placeholder.png
+.. image:: /images/robot-description.png
    :alt: Robot Description
    :align: center
    :scale: 100%
@@ -53,8 +54,7 @@ __________________________________
 
    .. code-block:: bash
 
-      ros2 launch turtlebot4_manipulator_description \
-        t4_manipulator_description.launch.py rviz:=true
+      ros2 launch turtlebot4_manipulator_description t4_manipulator_description.launch.py rviz:=true
 
 - **Key Nodes**:
   - `robot_state_publisher`: publishes TF tree for robot links
@@ -74,8 +74,7 @@ ______________________________________
 
    .. code-block:: bash
 
-      ros2 launch turtlebot4_manipulator_ignition \
-        t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
+    ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
 
 - **Key Nodes**:
   - `ign_gazebo`: simulation server and physics engine
@@ -122,7 +121,7 @@ Real-World Deployment (`real` branch)
   - Sensor drivers for LiDAR and RealSense
 
 
-Hand-Eye Calibration
+Hand-Eye Calibration (`real` branch)
 _____________________
 
 .. image:: /images/eye-calibration.png
@@ -130,11 +129,16 @@ _____________________
    :align: center
    :scale: 50%
 
-- **Description**: Calibrates end-effector to camera transform using MoveIt calibration pipeline and ArUco board.
+- **Description**: We use the same way from ASBR to calibrate end-effector to camera transform using MoveIt calibration pipeline and ArUco board.
 - **Procedure**:
   1. Launch calibration pipeline via MoveIt.
   2. Capture marker poses and compute transform.
   3. Publish static TF with `static_transform_publisher`.
+- **Launch Command**::
+
+   .. code-block:: bash
+
+      rsp-project-team-emrs/hand-eye-calib/matlab
 
 
 SLAM
@@ -143,6 +147,8 @@ ____
 .. raw:: html
 
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/7yhlDjgahV4?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- **Description**: Real-time SLAM using Nav2 for mapping and localization.
 
 - **Launch Command**::
 
@@ -172,12 +178,13 @@ ________________________
 
 Pick and Place
 ________________________
+- **Description**: MoveIt2-based pick-and-place functionality for trash collection.
+
 - **Launch Command**::
 
    .. code-block:: bash
 
       ros2 launch pick_place pick_place.launch.py
-
 
 .. raw:: html
 

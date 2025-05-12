@@ -120,36 +120,23 @@ Follow the steps below to install required dependencies and set up the workspace
 Running the System
 -------------------
 
-To launch the robot in Ignition with localization and Nav2 enabled:
+In the next section :ref:`runnable`, we list all the executive packages and commands to run the system. The commands are categorized into simulation and real robot execution.
 
-.. code-block:: bash
++--------------+-------------------------+
+| Executive     | Function               |
++==============+=========================+
+| Common Setup | Clone the project and set the workspace      |
++--------------+-------------------------+
+|  Robot Description |  Unified URDF model combining TurtleBot4 base, OpenManipulator-X arm, 2D LiDAR, and Intel RealSense camera.         |
++--------------+-------------------------+
+|  Gazebo Simulation |  Physics-based simulation in custom apartment and Wyman lab worlds.         |
++--------------+-------------------------+
+| Hand-Eye Calibration | |
++--------------+-------------------------+
+|  SLAM |   Real time mapping and localization      |
++--------------+-------------------------+
+|  Patrol |  Executes patrol routine         |
++--------------+-------------------------+
+|  Pick and Place            | MoveIt2-based pick-and-place functionality for trash collection. |
++--------------+-------------------------+
 
-   ros2 launch turtlebot4_manipulator_ignition \
-     t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
-
-To start patrolling behavior:
-
-.. code-block:: bash
-
-   ros2 launch turtlebot4_manipulator_navigation \
-     patrol.launch.py
-
-Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
-
-**Patrolling Demo**
-
-.. raw:: html
-
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/bnXM05LB094?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-**To visualize and test manipulation:**
-
-.. code-block:: bash
-
-   ros2 launch turtlebot4_manipulator_navigation manipulation.launch.py
-
-**Manipulation in Real Robot **
-
-.. raw:: html
-
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/eReHZW7ntQQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
