@@ -136,8 +136,6 @@ Follow the steps below to install required dependencies and set up the workspace
 Running the System
 -------------------
 
-###1. Simulation
-
 To launch the robot in Ignition with localization and Nav2 enabled:
 
 .. code-block:: bash
@@ -161,15 +159,13 @@ Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
    :width: 640
    :height: 360
 
-###2. Manipulation
-
-To visualize and test manipulation routines in simulation:
+To visualize and test manipulation:
 
 .. code-block:: bash
 
    ros2 launch turtlebot4_manipulator_navigation manipulation.launch.py
 
-**Manipulation **
+**Manipulation in Real Robot **
 
 .. image:: images/manipulator.gif
    :height: 450px
