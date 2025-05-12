@@ -47,7 +47,7 @@ __________________________________
 .. image:: /images/robot-description-w.png
    :alt: Robot Description
    :align: center
-   :scale: 100%
+   :scale: 70%
 
 - **Description**: Unified URDF model combining TurtleBot4 base, OpenManipulator-X arm, 2D LiDAR, and Intel RealSense camera.
 - **Launch Command**::
