@@ -19,7 +19,7 @@ Key Functionalities:
 
 - Autonomous Navigation and Mapping (Nav2)
 - Eye-Hand Calibration
-- Real-time Trash Detection and Tracking (YOLO, TF frames)
+- Real-time Trash Detection and Tracking (TF frames)
 - Object Segmentation and Pose Estimation (Point Cloud Analysis)
 - Robotic Arm Manipulation (MoveIt2, Pick-and-Place)
 
