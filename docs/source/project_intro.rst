@@ -60,9 +60,9 @@ For development and testing, the following simulation tools and packages are use
    :align: center
    :scale: 50%
 
-**Map Building**
+**SLAM**
 
-Watch the mapping workflow:
+Watch the SLAM workflow:
 
 .. image:: /images/mapping.gif
    :alt: Map Building Demo
@@ -154,7 +154,7 @@ Edit the file `config/patrol_waypoints.yaml` to customize patrol routes.
 
 **Patrolling Demo**
 
-.. image:: /images/placeholder.png
+.. image:: /images/patrolling.gif
    :alt: Robot Description
    :align: center
    :scale: 50%

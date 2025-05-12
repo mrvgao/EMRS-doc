@@ -97,7 +97,7 @@ Real-World Deployment (`real` branch)
 
 **Navigation & Patrolling**
 
-.. image:: /images/real_t4.gif
+.. image:: /images/patrolling.gif
    :alt: Real Patrol
    :align: center
    :scale: 50%
@@ -131,11 +131,6 @@ Common Setup
 
 **Workspace Initialization**
 
-.. image:: /images/placeholder.png
-   :alt: Workspace Initialization
-   :align: center
-   :scale: 50%
-
 .. code-block:: bash
 
    mkdir -p ~/rsp_ws/src && cd ~/rsp_ws/src
@@ -145,11 +140,6 @@ Common Setup
    colcon build --symlink-install && source install/setup.bash
 
 **Branch Selection**
-
-.. image:: /images/placeholder.png
-   :alt: Branch Selection
-   :align: center
-   :scale: 50%
 
 .. code-block:: bash
 
