@@ -171,7 +171,8 @@ To visualize and test manipulation routines in simulation:
 
 **Manipulation Demo**
 
-.. image:: /images/manipulator.gif
-   :alt: Manipulation Demo
-   :width: 640
-   :height: 360
+
+.. image:: images/manipulator.gif
+   :height: 450px
+   :width: 800px
+   :alt: manipulator
