@@ -129,7 +129,7 @@ Connect to the Turtlebot4 network and access the Create3 webserver through the R
 
 example: 192.168.28.24:8080
 
- Follow the instructions here (https://turtlebot.github.io/turtlebot4-user-manual/setup/discovery_server.html) to set up Discovery Server on the Turtlebot4 and get the its topics on your own PC.
+ Follow the instructions here (https://turtlebot.github.io/turtlebot4-user-manual/setup/discovery_server.html) to set up Discovery Server on the Turtlebot4 and get its topics on your own PC.
 
 **SLAM - Generating a map**
  Check that you can see the Turtlebot4 topics on your PC by running
