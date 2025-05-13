@@ -95,6 +95,41 @@ Follow the steps below to install required dependencies and set up the workspace
        ros-humble-rqt* \
        ros-humble-xacro
 
+Common Setup
+-------------
+
+**Workspace Initialization**
+
+After the environment installing in the :ref:`installation`, create a workspace and clone the repository:
+
+.. code-block:: bash
+
+   mkdir -p ~/rsp_ws/src && cd ~/rsp_ws/src
+   git clone https://github.com/jhu-rsp/rsp-project-team-emrs
+
+Then goto the directory containing src folder and run rosdep
+
+.. code-block:: bash
+
+   cd ~/rsp_ws
+   rosdep install --from-paths src --ignore-src -r -y
+   source /opt/ros/humble/setup.bash
+
+   sudo rosdep init && rosdep update
+   rosdep install --from-paths src --ignore-src -r -y
+   colcon build --symlink-install && source install/setup.bash
+
+**Branch Selection**
+
+.. code-block:: bash
+
+   cd ~/rsp_ws/src/rsp-project-team-emrs
+   git checkout sim   # for simulation
+   git checkout real  # for hardware deployment
+
+All source packages and full launch configurations are maintained in the [`rsp-project-team-emrs`](https://github.com/jhu-rsp/rsp-project-team-emrs) repository under the `sim` and `real` branches respectively. Refer to individual chapters (Mapping, Navigation, Manipulation) for deeper details on each subsystem.
+
+
 Running Examples
 ________________
 
@@ -119,7 +154,7 @@ A complete demo, which contains two steps,  for this project are listed in the f
 Running the System
 -------------------
 
-In the next section :ref:`runnable`, we list all the executive packages and commands to run the system. The commands are categorized into simulation and real robot execution.
+In the next sections, we list all the executive packages and commands to run the system. The commands are categorized into simulation and real robot execution.
 
 .. list-table:: Executable Packages
    :widths: 20 50

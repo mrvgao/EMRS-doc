@@ -6,7 +6,8 @@ Patrolling Trash-Collecting Robot Documentation
    :caption: Project Documentation
 
    project_intro
-   deliverables
+   simulation
+   real_robot
 
 
 Project Overview
