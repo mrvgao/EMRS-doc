@@ -7,7 +7,6 @@ Patrolling Trash-Collecting Robot Documentation
 
    project_intro
    deliverables
-   challenges_and_future_works
 
 
 Project Overview
