@@ -95,28 +95,6 @@ Follow the steps below to install required dependencies and set up the workspace
        ros-humble-rqt* \
        ros-humble-xacro
 
-4. Clone the repository and build the workspace:
-
-.. code-block:: bash
-
-   mkdir -p ~/rsp_ws/src
-   cd ~/rsp_ws/src
-   git clone https://github.com/jhu-rsp/rsp-project-team-emrs
-
-   cd ~/rsp_ws
-   source /opt/ros/humble/setup.bash
-   rosdep init && rosdep update
-   rosdep install --from-paths src --ignore-src -r -y
-   colcon build --symlink-install
-   source install/setup.bash
-
-5. Choose a branch for your use case:
-
-.. code-block:: bash
-
-   cd ~/rsp_ws/src/rsp-proj
-   git checkout sim   # or 'real' for hardware setup
-
 Running Examples
 ________________
 
