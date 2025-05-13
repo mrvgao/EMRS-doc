@@ -32,11 +32,11 @@ Then goto the directory containing src folder and run rosdep
 
 .. code-block:: bash
 
-   cd ~/rsp_ws/src/rsp-proj
+   cd ~/rsp_ws/src/rsp-project-team-emrs
    git checkout sim   # for simulation
    git checkout real  # for hardware deployment
 
-All source packages and full launch configurations are maintained in the [`rsp-proj`](https://github.com/jhu-rsp/rsp-project-team-emrs) repository under the `sim` and `real` branches respectively. Refer to individual chapters (Mapping, Navigation, Manipulation) for deeper details on each subsystem.
+All source packages and full launch configurations are maintained in the [`rsp-project-team-emrs`](https://github.com/jhu-rsp/rsp-project-team-emrs) repository under the `sim` and `real` branches respectively. Refer to individual chapters (Mapping, Navigation, Manipulation) for deeper details on each subsystem.
 
 
 Simulated Functionality (`sim` branch)
