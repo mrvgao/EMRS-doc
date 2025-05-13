@@ -43,27 +43,7 @@ Simulated Functionality (`sim` branch)
 ----------------------------------------
 
 
-Robot Description & Visualization
-__________________________________
-
-.. image:: /images/robot-description-w.png
-   :alt: Robot Description
-   :align: center
-   :scale: 70%
-
-- **Description**: Unified URDF model combining TurtleBot4 base, OpenManipulator-X arm, 2D LiDAR, and Intel RealSense camera.
-- **Launch Command**::
-
-.. code-block:: bash
-
-    ros2 launch turtlebot4_manipulator_description t4_manipulator_description.launch.py rviz:=true
-
-- **Key Nodes**:
-  - `robot_state_publisher`: publishes TF tree for robot links
-  - `joint_state_publisher_gui`: interactive joint position control
-  - `rviz2`: 3D visualization of robot and sensors
-
-Ignition Gazebo Simulation (sim branch)
+Ignition Gazebo Simulation
 ______________________________________
 
 .. image:: /images/gazebo_gif.gif
