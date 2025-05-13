@@ -56,7 +56,7 @@ Connect the teleop controller and drive the robot around the room, making sure t
 
 .. code:: bash
 
-    ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name: data: 'map_name'"
+    ros2 run nav2_map_server map_saver_cli -f "map_name" --ros-args -p map_subscribe_transient_local:=true -r __ns:=/emrs
 
 And move the pgm and yaml file to the maps folder in the turtlebot4_manipulator_navigation package.
 
