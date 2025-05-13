@@ -104,7 +104,7 @@ ___________________________________
 Real-World Deployment (`real` branch)
 -------------------------------------
 
-**Hardware Setup & Drivers**
+**Hardware and Drivers**
 
 .. image:: /images/hardware.jpg
    :alt: Physical Robot
@@ -119,9 +119,57 @@ Real-World Deployment (`real` branch)
   - `open_manipulator_node`: controller for arm joints
   - Sensor drivers for LiDAR and RealSense
 
-- **ACCESS Point Setting**: For Wi-Fi connection, set up the access point on the TurtleBot4. Connect to the access point using a laptop or mobile device.
-
 - **Setting of USB3.0**: We used USB 3.0 for the OAK-D and RealSense cameras to handle the high bandwidth needed for streaming RGB and depth data at full resolution and frame rate—something USB 2.0 couldn’t support without frame drops. Since the Raspberry Pi couldn’t supply enough power to run both cameras and the robot arm, we added a separate external power supply for the arm to ensure stable performance without overloading the Pi.
+
+TurtleBot4 Setup
+_________________
+
+Make sure the Turtlebot4 is in Access Point (AP) mode with namespace "emrs", following the instructions in https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html.
+Connect to the Turtlebot4 network and access the Create3 webserver through the Raspberry Pi's ip address and port 8080.
+
+example: 192.168.28.24:8080
+
+ Follow the instructions here (https://turtlebot.github.io/turtlebot4-user-manual/setup/discovery_server.html) to set up Discovery Server on the Turtlebot4 and get the its topics on your own PC.
+
+**SLAM - Generating a map**
+ Check that you can see the Turtlebot4 topics on your PC by running
+
+.. code:: bash
+
+    ros2 topic list
+
+You should see topics multiple topics with prefix "emrs". If you do not, check that you are connected to the AP network, run "source /etc/turtlebot4_discovery/setup.bash", "ros2 daemon stop", and "ros2 daemon start". Check the topic list and ensure that they are being published to by echo-ing or checking the hz. Finally, you can run the following command:
+
+.. code:: bash
+
+    ros2 launch turtlebot4_navigation slam.launch.py namespace:=emrs
+    ros2 launch turtlebot4_viz view_robot.launch.py namespace:=emrs
+
+Connect the teleop controller and drive the robot around the room, making sure the map on Rviz is continuously growing. Once satisfied with the map, save it by calling
+
+.. code:: bash
+
+    ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name: data: 'map_name'"
+
+And move the pgm and yaml file to the maps folder in the turtlebot4_manipulator_navigation package.
+
+**Localization, Navigation, and Patrolling**
+Note: the localization command may not properly run if the robot has been running for a while. In order to guarantee success of the command, restart the Turtlebot4 and make sure you are receiving its topics.
+Now you can run localization:
+
+ros2 launch turtlebot4_manipulator_navigation navigate.py map_name:=wyman_157_hd.yaml
+
+changing the map name to whatever you saved your SLAM map as. Once Rviz opens and the map appears, use Rviz to give an initial 2D pose. The robot model, laser scan, costmap/voxels should appear. Once you see the voxels, you can input Nav2 goals, taking note of the position and orientation to save later as a patrol route.
+Once you are satisfied, edit the "patrol_waypoints.yaml" file with your waypoints, where patrol_route should be a flattened array with every 6 elements corresponding to, x, y, z, qx, qy, qz, qw of each waypoint.
+Once a patrol route is saved, restart the Turtlebot4 and you can now run the patrol.
+In order to run the patrol, run the navigate command above, wait for the voxels to appear, then run:
+
+
+.. code:: bash
+
+    ros2 launch turtlebot4_manipulator_navigation patrol.py
+
+You should see the robot start to move in the patrol route you saved earlier.
 
 
 Hand-Eye Calibration (`real` branch)
