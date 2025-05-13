@@ -46,7 +46,7 @@ Simulated Functionality (`sim` branch)
 Ignition Gazebo Simulation - Localization and Navigation
 ______________________________________
 
-::codeblock:: bash
+.. code-block:: bash
 
     cd ~/rsp_ws/src/rsp-project-team-emrs
     git checkout sim   # for simulation
