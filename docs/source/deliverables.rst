@@ -43,7 +43,7 @@ Simulated Functionality (`sim` branch)
 ----------------------------------------
 
 
-Ignition Gazebo Simulation
+Ignition Gazebo Simulation - Localization and Navigation
 ______________________________________
 
 .. raw:: html
@@ -56,7 +56,7 @@ ______________________________________
 
 .. code-block:: bash
 
-    ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false namespace:=emrs
+    ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
 
 - **Key Nodes**:
   - `ign_gazebo`: simulation server and physics engine
@@ -120,7 +120,9 @@ _____________________
 
 .. code-block:: bash
 
-    rsp-project-team-emrs/hand-eye-calib/matlab
+    cd ~/rsp_ws/src/rsp-project-team-emrs
+    git checkout real
+    matlab -nodisplay -nodesktop -r "run('~/rsp_ws/src/rsp-project-team-emrs/hand_eye_calib/matlab/hand_eye_calib.mlx')"
 
 
 SLAM
