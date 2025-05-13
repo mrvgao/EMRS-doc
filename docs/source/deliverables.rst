@@ -233,11 +233,53 @@ Pick and Place
 ________________________
 - **Description**: MoveIt2-based pick-and-place functionality for trash collection.
 
-- **Launch Command**::
+- **Launch Command**:: To run the pick and place action, ssh into the Turtlebot4 by running:
 
 .. code-block:: bash
 
-      ros2 launch pick_place pick_place.launch.py
+    ssh -X ubuntu@10.42.0.1
+
+replacing "10.42.0.1" with the ip address shown on the Turtlebot4 screen. Repeat this for a total of three terminals each ssh'ed into the robot.
+Check which USB port the arm is plugged into by running:
+
+.. code-block:: bash
+
+    sudo dmesg | grep tty
+
+and then add permissions,
+
+.. code-block:: bash
+
+    chmod 666 /dev/ttyUSB0
+
+replacing "/dev/ttyUSB0" with whatever port name you have. Also run
+
+groups
+
+and see if the user is in the "dialout" group. If not, run:
+
+.. code-block:: bash
+
+    sudo usermod -aG dialout $USER
+
+Then start the open-manipulator-x arm by running the following command, making sure to physically hold the robot arm near its home configuration before doing so:
+
+.. code-block:: bash
+
+    ros2 launch open_manipulator_x_bringup hardware.launch.py port_name:=/dev/ttyUSB0
+
+The motors should engage and you may then let go of the arm. If there are errors, it is most likely because of the port name being wrong or permissions not being applied (may need a reboot). Then, in another terminal, run:
+
+ros2 launch open_manipulator_x_moveit_config move_group.launch.py
+
+Finally, run:
+
+.. code-block:: bash
+
+    ros2 launch pick_place pick_place.launch.py
+
+to see a pick and place action.
+
 
 .. raw:: html
 
