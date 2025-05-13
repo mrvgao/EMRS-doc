@@ -1,7 +1,7 @@
 Simulation Deliverables
 =======================
 
-This section lists the **completed deliverables** of the Patrolling Trash-Collecting Robot project, organized by functionality. For system overview and environment setup, see the **Project Introduction**.
+This section lists the **simulation deliverables** of the Patrolling Trash-Collecting Robot project, organized by functionality. For system overview and environment setup, see the **Project Introduction**.
 
 
 Simulated Functionality (`sim` branch)

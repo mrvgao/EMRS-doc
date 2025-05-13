@@ -1,6 +1,9 @@
 Real-World Deployment (`real` branch)
 =======================================
 
+This section lists the **Real-World Deployment** of the Patrolling Trash-Collecting Robot project, organized by functionality. For system overview and environment setup, see the **Project Introduction**.
+
+
 ::codeblock:: bash
 
     cd ~/rsp_ws/src/rsp-project-team-emrs
