@@ -31,6 +31,7 @@ Then goto the directory containing src folder and run rosdep
 
 .. code-block:: bash
 
+   $ source /opt/ros/humble/setup.bash
    $ rosdep install --from-paths src --ignore-src -r -y
 
 
