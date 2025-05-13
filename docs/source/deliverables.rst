@@ -54,9 +54,9 @@ __________________________________
 - **Description**: Unified URDF model combining TurtleBot4 base, OpenManipulator-X arm, 2D LiDAR, and Intel RealSense camera.
 - **Launch Command**::
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      ros2 launch turtlebot4_manipulator_description t4_manipulator_description.launch.py rviz:=true
+    ros2 launch turtlebot4_manipulator_description t4_manipulator_description.launch.py rviz:=true
 
 - **Key Nodes**:
   - `robot_state_publisher`: publishes TF tree for robot links
@@ -74,7 +74,7 @@ ______________________________________
 - **Description**: Physics-based simulation in custom apartment and Wyman lab worlds.
 - **Launch Command**::
 
-   .. code-block:: bash
+.. code-block:: bash
 
     ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
 
@@ -95,9 +95,9 @@ ___________________________________
 - **Parameters**: Defined in `config/patrol_waypoints.yaml`.
 - **Launch Command**::
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
+    ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
 
 - **Key Nodes**:
   - `patrol_robot_node`: reads waypoints and publishes goals
@@ -138,9 +138,9 @@ _____________________
   3. Publish static TF with `static_transform_publisher`.
 - **Launch Command**::
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      rsp-project-team-emrs/hand-eye-calib/matlab
+    rsp-project-team-emrs/hand-eye-calib/matlab
 
 
 SLAM
@@ -154,9 +154,9 @@ ____
 
 - **Launch Command**::
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      ros2 launch turtlebot4_manipulator_navigation navigate.launch.py map_name:=r_apt.yaml
+    ros2 launch turtlebot4_manipulator_navigation navigate.launch.py map_name:=r_apt.yaml
 
 Navigation & Patrolling
 ________________________
@@ -169,7 +169,7 @@ ________________________
 - **Description**: Executes identical patrol routine on hardware.
 - **Launch Command**::
 
-   .. code-block:: bash
+.. code-block:: bash
 
       ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
 
@@ -184,7 +184,7 @@ ________________________
 
 - **Launch Command**::
 
-   .. code-block:: bash
+.. code-block:: bash
 
       ros2 launch pick_place pick_place.launch.py
 
