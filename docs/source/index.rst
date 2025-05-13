@@ -1,5 +1,5 @@
-Patrolling Trash-Collecting Robot
-==================================
+Patrolling Trash-Collecting Robot Documentation
+===============================================
 
 .. toctree::
    :maxdepth: 2
