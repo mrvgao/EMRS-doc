@@ -236,7 +236,9 @@ and then add permissions,
 
 replacing "/dev/ttyUSB0" with whatever port name you have. Also run
 
-groups
+.. code-block:: bash
+
+    groups
 
 and see if the user is in the "dialout" group. If not, run:
 
@@ -266,4 +268,52 @@ to see a pick and place action.
 .. raw:: html
 
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/eReHZW7ntQQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+Trash Actions - Approach, Pick, and Place
+________________________________________
+
+**Approach**
+
+This action will search for an ArUco tag in the view of the OAK-D camera on the Turtlebot4 and travel in front of it to put the Open Manipulator-X arm in range of the trash object. It uses the Approach.action interface:
+
+.. code-block:: cpp
+
+    string marker_frame        # TF frame of the detected ArUco marker
+    bool success
+    string message
+    ---
+    float64 distance_to_goal
+
+with the goal "marker_frame" as the name of the frame outputted by the ArUco detection node. This is usually "marker".
+
+**Pick**
+
+This action will search for the ArUco tag of the trash object in the view of the RealSense D435 camera mounted on the Open Manipulator-X arm and will move the arm to pick up the trash object. It uses the Pick.action interface:
+
+.. code-block:: cpp
+
+    string marker_frame        # TF frame of the detected ArUco marker
+    ---
+    bool success
+    string message
+    ---
+    float64 distance_to_goal
+
+with the goal "marker_frame" as the name of the frame outputted by the ArUco detection node. This is usually "marker_arm".
+
+**Place**
+
+This action will move the arm with the trash object to the trash can, opening the gripper and depositing the trash inside. It uses the Place.action interface:
+
+.. code-block:: cpp
+
+    geometry_msgs/PoseStamped trash_pose
+    ---
+    bool success
+    string message
+    ---
+    float64 distance_to_goal
+
+with the goal "trash_pose" as the pose of the arm above the trash can.
 
