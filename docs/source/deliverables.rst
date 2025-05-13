@@ -19,14 +19,6 @@ After the environment installing in the :ref:`installation`, create a workspace 
    rosdep install --from-paths src --ignore-src -r -y
    colcon build --symlink-install && source install/setup.bash
 
-**Branch Selection**
-
-.. code-block:: bash
-
-   cd ~/rsp_ws/src/rsp-proj
-   git checkout sim   # for simulation
-   git checkout real  # for hardware deployment
-
 Then goto the directory containing src folder and run rosdep
 
 .. code-block:: bash
@@ -35,6 +27,13 @@ Then goto the directory containing src folder and run rosdep
    $ rosdep init && rosdep update
    $ rosdep install --from-paths src --ignore-src -r -y
 
+**Branch Selection**
+
+.. code-block:: bash
+
+   cd ~/rsp_ws/src/rsp-proj
+   git checkout sim   # for simulation
+   git checkout real  # for hardware deployment
 
 All source packages and full launch configurations are maintained in the [`rsp-proj`](https://github.com/jhu-rsp/rsp-project-team-emrs) repository under the `sim` and `real` branches respectively. Refer to individual chapters (Mapping, Navigation, Manipulation) for deeper details on each subsystem.
 
