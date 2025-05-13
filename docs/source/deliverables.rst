@@ -131,8 +131,10 @@ example: 192.168.28.24:8080
 
  Follow the instructions here (https://turtlebot.github.io/turtlebot4-user-manual/setup/discovery_server.html) to set up Discovery Server on the Turtlebot4 and get its topics on your own PC.
 
-**SLAM - Generating a map**
- Check that you can see the Turtlebot4 topics on your PC by running
+SLAM - Generating a map
+_______________________
+
+Check that you can see the Turtlebot4 topics on your PC by running
 
 .. code:: bash
 
@@ -153,11 +155,20 @@ Connect the teleop controller and drive the robot around the room, making sure t
 
 And move the pgm and yaml file to the maps folder in the turtlebot4_manipulator_navigation package.
 
-**Localization, Navigation, and Patrolling**
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/7yhlDjgahV4?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+Localization, Navigation, and Patrolling
+________________________________________
+
 Note: the localization command may not properly run if the robot has been running for a while. In order to guarantee success of the command, restart the Turtlebot4 and make sure you are receiving its topics.
 Now you can run localization:
 
-ros2 launch turtlebot4_manipulator_navigation navigate.py map_name:=wyman_157_hd.yaml
+.. code:: bash
+
+    ros2 launch turtlebot4_manipulator_navigation navigate.py map_name:=wyman_157_hd.yaml
 
 changing the map name to whatever you saved your SLAM map as. Once Rviz opens and the map appears, use Rviz to give an initial 2D pose. The robot model, laser scan, costmap/voxels should appear. Once you see the voxels, you can input Nav2 goals, taking note of the position and orientation to save later as a patrol route.
 Once you are satisfied, edit the "patrol_waypoints.yaml" file with your waypoints, where patrol_route should be a flattened array with every 6 elements corresponding to, x, y, z, qx, qy, qz, qw of each waypoint.
@@ -170,6 +181,12 @@ In order to run the patrol, run the navigate command above, wait for the voxels 
     ros2 launch turtlebot4_manipulator_navigation patrol.py
 
 You should see the robot start to move in the patrol route you saved earlier.
+
+
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/bnXM05LB094?autoplay=1&mute=1" title="Patrolling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 Hand-Eye Calibration (`real` branch)
@@ -193,41 +210,6 @@ _____________________
     git checkout real
     matlab -nodisplay -nodesktop -r "run('~/rsp_ws/src/rsp-project-team-emrs/hand_eye_calib/matlab/hand_eye_calib.mlx')"
 
-
-SLAM
-____
-
-.. raw:: html
-
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/7yhlDjgahV4?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-- **Description**: Real-time SLAM using Nav2 for mapping and localization.
-
-- **Launch Command**::
-
-.. code-block:: bash
-
-    ros2 launch turtlebot4_manipulator_navigation navigate.launch.py map_name:=r_apt.yaml
-
-Navigation & Patrolling
-________________________
-
-.. raw:: html
-
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/bnXM05LB094?autoplay=1&mute=1" title="Patrolling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-- **Description**: Executes identical patrol routine on hardware.
-- **Launch Command**::
-
-.. code-block:: bash
-
-      ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
-
-- **Key Nodes**:
-  - Full Nav2 stack (`planner_server`, `controller_server`, `lifecycle_manager_navigation`)
-  - `patrol_robot_node`
-  - Hardware sensors publishing to ROS2 topics
 
 Pick and Place
 ________________________
