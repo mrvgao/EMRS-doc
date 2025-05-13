@@ -101,8 +101,6 @@ ___________________________________
     ros2 run turtlebot4_trash_actions trash_collection_task.py
 
 
-
-
 Real-World Deployment (`real` branch)
 -------------------------------------
 
