@@ -64,6 +64,7 @@ ______________________________________
     ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
 
 - **Key Nodes**:
+
   - `ign_gazebo`: simulation server and physics engine
   - `ros_ign_bridge`: bridges ROS2 topics/services to Ignition
   - Nav2 nodes (`controller_server`, `planner_server`, `lifecycle_manager_navigation`)
@@ -85,6 +86,7 @@ ___________________________________
     ros2 launch turtlebot4_manipulator_navigation patrol.launch.py
 
 - **Key Nodes**:
+
   - `patrol_robot_node`: reads waypoints and publishes goals
   - `bt_navigator`: executes behavior tree for navigation
   - `waypoint_follower`: follows sequential goals
