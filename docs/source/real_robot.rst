@@ -182,7 +182,7 @@ ________________________________________
 
 This action will search for an ArUco tag in the view of the OAK-D camera on the Turtlebot4 and travel in front of it to put the Open Manipulator-X arm in range of the trash object. It uses the Approach.action interface:
 
-.. code-block:: cpp
+.. code-block:: srv
 
     string marker_frame        # TF frame of the detected ArUco marker
     bool success
@@ -196,7 +196,7 @@ with the goal "marker_frame" as the name of the frame outputted by the ArUco det
 
 This action will search for the ArUco tag of the trash object in the view of the RealSense D435 camera mounted on the Open Manipulator-X arm and will move the arm to pick up the trash object. It uses the Pick.action interface:
 
-.. code-block:: cpp
+.. code-block:: srv
 
     string marker_frame        # TF frame of the detected ArUco marker
     ---
@@ -211,7 +211,7 @@ with the goal "marker_frame" as the name of the frame outputted by the ArUco det
 
 This action will move the arm with the trash object to the trash can, opening the gripper and depositing the trash inside. It uses the Place.action interface:
 
-.. code-block:: cpp
+.. code-block:: srv
 
     geometry_msgs/PoseStamped trash_pose
     ---
