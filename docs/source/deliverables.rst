@@ -24,7 +24,8 @@ Then goto the directory containing src folder and run rosdep
    rosdep install --from-paths src --ignore-src -r -y
    colcon build --symlink-install && source install/setup.bash
    source /opt/ros/humble/setup.bash
-   rosdep init && rosdep update
+
+   sudo rosdep init && rosdep update
    rosdep install --from-paths src --ignore-src -r -y
 
 **Branch Selection**
