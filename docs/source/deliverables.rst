@@ -4,10 +4,6 @@ Deliverables
 
 This section lists the **completed deliverables** of the Patrolling Trash-Collecting Robot project, organized by functionality. For system overview and environment setup, see the **Project Introduction**.
 
-Simulated Functionality (`sim` branch)
-----------------------------------------
-
-
 Common Setup
 -------------
 
@@ -39,6 +35,10 @@ Then goto the directory containing src folder and run rosdep
 
 
 All source packages and full launch configurations are maintained in the [`rsp-proj`](https://github.com/jhu-rsp/rsp-project-team-emrs) repository under the `sim` and `real` branches respectively. Refer to individual chapters (Mapping, Navigation, Manipulation) for deeper details on each subsystem.
+
+
+Simulated Functionality (`sim` branch)
+----------------------------------------
 
 
 Robot Description & Visualization
