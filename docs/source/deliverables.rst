@@ -46,17 +46,17 @@ Simulated Functionality (`sim` branch)
 Ignition Gazebo Simulation
 ______________________________________
 
-.. image:: /images/gazebo_gif.gif
-   :alt: Gazebo Simulation
-   :align: center
-   :scale: 100%
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/jiAYWyJmKLg?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 - **Description**: Physics-based simulation in custom apartment and Wyman lab worlds.
 - **Launch Command**::
 
 .. code-block:: bash
 
-    ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false
+    ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false namespace:=emrs
 
 - **Key Nodes**:
   - `ign_gazebo`: simulation server and physics engine
