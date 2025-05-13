@@ -46,6 +46,11 @@ Simulated Functionality (`sim` branch)
 Ignition Gazebo Simulation - Localization and Navigation
 ______________________________________
 
+::codeblock:: bash
+
+    cd ~/rsp_ws/src/rsp-project-team-emrs
+    git checkout sim   # for simulation
+
 .. raw:: html
 
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/jiAYWyJmKLg?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -96,13 +101,23 @@ ___________________________________
 - **Description**: Patrol, find the trash, and pick it up.
 - **Launch Command**::
 
+
 .. code-block:: bash
 
+    # in terminal A
+    ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false use_sim_time:=true use_sim:=true
+
+    # in another terminal B
     ros2 run turtlebot4_trash_actions trash_collection_task.py
 
 
 Real-World Deployment (`real` branch)
 -------------------------------------
+
+::codeblock:: bash
+
+    cd ~/rsp_ws/src/rsp-project-team-emrs
+    git checkout real   # for real robot
 
 **Hardware and Drivers**
 
