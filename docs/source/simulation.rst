@@ -7,6 +7,29 @@ This section lists the **simulation deliverables** of the Patrolling Trash-Colle
 Simulated Functionality (`sim` branch)
 ----------------------------------------
 
+Trash Collection in Simulation
+___________________________________
+
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/uyoueyiZ7CE?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+- **Description**: Patrol, find the trash, and pick it up.
+- **Launch Command**::
+
+
+.. code-block:: bash
+
+    git checkout sim   # for simulation
+
+    # in terminal A
+    ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false use_sim_time:=true use_sim:=true
+
+    # in another terminal B
+    ros2 run turtlebot4_trash_actions trash_collection_task.py
+
+
 
 Ignition Gazebo Simulation - Localization and Navigation
 ______________________________________
@@ -57,24 +80,3 @@ ___________________________________
   - `waypoint_follower`: follows sequential goals
 
 
-Trash Collection in Simulation
-___________________________________
-
-.. raw:: html
-
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/uyoueyiZ7CE?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-- **Description**: Patrol, find the trash, and pick it up.
-- **Launch Command**::
-
-
-.. code-block:: bash
-
-    git checkout sim   # for simulation
-
-    # in terminal A
-    ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false use_sim_time:=true use_sim:=true
-
-    # in another terminal B
-    ros2 run turtlebot4_trash_actions trash_collection_task.py
