@@ -85,6 +85,24 @@ ___________________________________
   - `waypoint_follower`: follows sequential goals
 
 
+Trash Collection in Simulation
+___________________________________
+
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/uyoueyiZ7CE?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+- **Description**: Patrol, find the trash, and pick it up.
+- **Launch Command**::
+
+.. code-block:: bash
+
+    ros2 run turtlebot4_trash_actions trash_collection_task.py
+
+
+
+
 Real-World Deployment (`real` branch)
 -------------------------------------
 
@@ -101,6 +119,13 @@ Real-World Deployment (`real` branch)
   - `turtlebot4_node`: ROS2 driver for Create3 base
   - `open_manipulator_node`: controller for arm joints
   - Sensor drivers for LiDAR and RealSense
+
+
+ - **Hardware Settings*:
+   - **ACCESS Point Setting**: Base robot with integrated sensors.
+   - **OpenManipulator-X**: Robotic arm for manipulation tasks.
+   - **LiDAR**: For mapping and localization.
+   - **RealSense Camera**: For object detection and pose estimation.
 
 
 Hand-Eye Calibration (`real` branch)
