@@ -101,9 +101,11 @@ Follow the steps below to install required dependencies and set up the workspace
 
    mkdir -p ~/rsp_ws/src
    cd ~/rsp_ws/src
-   git clone https://github.com/mrvgao/rsp-proj.git
+   git clone https://github.com/jhu-rsp/rsp-project-team-emrs
 
    cd ~/rsp_ws
+   source /opt/ros/humble/setup.bash
+   rosdep init && rosdep update
    rosdep install --from-paths src --ignore-src -r -y
    colcon build --symlink-install
    source install/setup.bash
