@@ -29,7 +29,9 @@ This section lists the **Real-World Deployment** of the Patrolling Trash-Collect
 TurtleBot4 Setup
 _________________
 
-Make sure the Turtlebot4 is in Access Point (AP) mode with namespace "emrs", following the instructions in https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html.
+.. warning::
+
+    Make sure the Turtlebot4 is in Access Point (AP) mode with namespace "emrs", following the instructions in https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html.
 Connect to the Turtlebot4 network and access the Create3 webserver through the Raspberry Pi's ip address and port 8080.
 
 example: 192.168.28.24:8080
@@ -157,7 +159,9 @@ Then start the open-manipulator-x arm by running the following command, making s
 
     ros2 launch open_manipulator_x_bringup hardware.launch.py port_name:=/dev/ttyUSB0
 
-The motors should engage and you may then let go of the arm. If there are errors, it is most likely because of the port name being wrong or permissions not being applied (may need a reboot). Then, in another terminal, run:
+.. note::
+
+    The motors should engage and you may then let go of the arm. If there are errors, it is most likely because of the port name being wrong or permissions not being applied (may need a reboot). Then, in another terminal, run:
 
 ros2 launch open_manipulator_x_moveit_config move_group.launch.py
 
