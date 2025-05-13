@@ -114,13 +114,13 @@ Real-World Deployment (`real` branch)
 
 - **Description**: Integration on TurtleBot4 with OpenManipulator-X, LiDAR, RealSense.
 - **Driver Nodes**:
+
   - `turtlebot4_node`: ROS2 driver for Create3 base
   - `open_manipulator_node`: controller for arm joints
   - Sensor drivers for LiDAR and RealSense
 
-- **Hardware Settings**:
-  - **ACCESS Point Setting**: For Wi-Fi connection, set up the access point on the TurtleBot4. Connect to the access point using a laptop or mobile device.
-  - **Setting of USB3.0**: We used USB 3.0 for the OAK-D and RealSense cameras to handle the high bandwidth needed for streaming RGB and depth data at full resolution and frame rate—something USB 2.0 couldn’t support without frame drops. Since the Raspberry Pi couldn’t supply enough power to run both cameras and the robot arm, we added a separate external power supply for the arm to ensure stable performance without overloading the Pi.
+- **ACCESS Point Setting**: For Wi-Fi connection, set up the access point on the TurtleBot4. Connect to the access point using a laptop or mobile device.
+- **Setting of USB3.0**: We used USB 3.0 for the OAK-D and RealSense cameras to handle the high bandwidth needed for streaming RGB and depth data at full resolution and frame rate—something USB 2.0 couldn’t support without frame drops. Since the Raspberry Pi couldn’t supply enough power to run both cameras and the robot arm, we added a separate external power supply for the arm to ensure stable performance without overloading the Pi.
 
 
 Hand-Eye Calibration (`real` branch)
