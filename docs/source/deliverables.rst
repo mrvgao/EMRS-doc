@@ -66,10 +66,10 @@ ______________________________________
 Autonomous Patrolling In Simulation
 ___________________________________
 
-.. image:: /images/simulation.gif
-   :alt: Patrolling Behavior
-   :align: center
-   :scale: 100%
+.. raw:: html
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/n4iy4K0s2rE?autoplay=1&mute=1" title="SLAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 - **Description**: Waypoint-based patrol using Nav2 behavior tree.
 - **Parameters**: Defined in `config/patrol_waypoints.yaml`.
