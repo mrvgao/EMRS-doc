@@ -27,7 +27,7 @@ ___________________________________
     ros2 launch turtlebot4_manipulator_ignition t4_manipulator_ignition.launch.py localization:=true nav2:=true slam:=false use_sim_time:=true use_sim:=true
 
     # in another terminal B
-    ros2 run turtlebot4_trash_actions trash_collection_task.py --ros-args -r __ns:=/emrs
+    ros2 run turtlebot4_trash_actions trash_collection_task.py
 
 
 Ignition Gazebo Simulation - Localization and Navigation
