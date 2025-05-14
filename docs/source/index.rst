@@ -1,6 +1,15 @@
 Patrolling Trash-Collecting Robot Documentation
 ===============================================
 
+Contributors
+-----------
+
+* Ethan Oh
+* Marvin Gao
+* Ritwik Rohan
+* Suhash Reddy Thandheri
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Project Documentation
