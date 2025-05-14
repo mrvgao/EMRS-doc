@@ -122,15 +122,15 @@ ArUco Detection and Approaching
 _____________________
 
 
-**Description**: The robot uses computer vision to detect ArUco markers attached to trash objects and navigates to optimal picking positions.
-**Detection System**:
+- **Description**: The robot uses computer vision to detect ArUco markers attached to trash objects and navigates to optimal picking positions.
+- **Detection System**:
 
 Primary detection with OAK-D camera mounted on the robot base
 Secondary precise detection with RealSense D435 on the arm for pick operations
 Real-time pose estimation of trash objects relative to the robot
 
 
-**Approaching Procedure**:
+- **Approaching Procedure**:
 
 During patrol, the robot scans the environment for ArUco markers
 Upon detection, the robot stops and calculates the optimal approach position
@@ -138,7 +138,7 @@ Robot navigates to position itself within arm's reach of the trash object
 Fine positioning adjustments ensure the object is within the arm's workspace
 
 
-**Launch Commands**:
+- **Launch Commands**:
 
 .. code-block:: bash
 
@@ -152,7 +152,7 @@ The above launch file sets up nav2, aruco detection and approach action servers.
     ros2 action send_goal /emrs/approach turtlebot4_trash_actions/action/Approach "{marker_frame: 'marker'}" --ros-args -r /tf:=/emrs/tf -r /tf_static:=/emrs/tf_static --remap __ns:=/emrs
 
 
-The above command can be run for testing which sends goal to action server that starts the approach action. The whole pipeline can be run using trash_collection_task.py which undocks the robot and start the complete pipeline.
+The above command can be run for testing which sends goal to action server that starts the approach action. The whole pipeline can be run using trash_collection_task.py which undocks the robot and starts the complete pipeline.
 
 
 .. raw:: html
