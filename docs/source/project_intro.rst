@@ -1,6 +1,14 @@
 Overview of Patrolling Trash-Collecting Robot
 =================================
 
+Contributors
+-----------
+
+* Ethan Oh
+* Marvin Gao
+* Ritwik Rohan
+* Suhash Reddy Thandheri
+
 The **Patrolling Trash-Collecting Robot** project brings together a mobile robotic platform, a manipulator arm, and intelligent perception and navigation systems to autonomously patrol an environment and collect small trash objects. This system is built on ROS2 and supports both simulation in Ignition Gazebo and deployment on a real TurtleBot4-based hardware platform.
 
 .. contents:: Table of Contents
