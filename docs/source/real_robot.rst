@@ -149,7 +149,7 @@ The above launch file sets up nav2, aruco detection and approach action servers.
 
 .. code-block:: bash
 
-    ros2 action send_goal /emrs/approach turtlebot4_trash_actions/action/Approach "{marker_frame: 'marker'}" --ros-args -r /tf:=/emrs/tf -r /tf_static:=/emrs/tf_static --remap __ns:=/emrs
+    ros2 action send_goal /emrs/approach_trash turtlebot4_trash_actions/action/Approach "{marker_frame: 'marker'}" --ros-args -r /tf:=/emrs/tf -r /tf_static:=/emrs/tf_static --remap __ns:=/emrs
 
 
 The above command can be run for testing which sends goal to action server that starts the approach action. The whole pipeline can be run using trash_collection_task.py which undocks the robot and starts the complete pipeline.
