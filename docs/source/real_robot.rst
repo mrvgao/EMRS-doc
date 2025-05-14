@@ -141,15 +141,23 @@ Fine positioning adjustments ensure the object is within the arm's workspace
 **Launch Commands**:
 
 .. code-block:: bash
-# Launch Navigation, Action servers for ArUco detection and approach node (on robot)
-ros2 launch turtlebot4_manipulator_navigation navigate.launch.py
 
-# Test approach to a specific marker ID (for testing)
-ros2 action send_goal /emrs/approach turtlebot4_trash_actions/action/Approach "{marker_frame: 'marker'}" \
-  --ros-args -r /tf:=/emrs/tf -r /tf_static:=/emrs/tf_static --remap __ns:=/emrs
+    ros2 launch turtlebot4_manipulator_navigation navigate.launch.py
+
+The above launch file sets up nav2, aruco detection and approach action servers.
+
+
+.. code-block:: bash
+
+    ros2 action send_goal /emrs/approach turtlebot4_trash_actions/action/Approach "{marker_frame: 'marker'}" \
+
+
+The above command can be run for testing which sends goal to action server that starts the approach action. The whole pipeline can be run using trash_collection_task.py which undocks the robot and start the complete pipeline.
+
+
 .. raw:: html
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/O27eazXY1Lk?autoplay=1&mute=1" title="ArUco detection and approach" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/O27eazXY1Lk?autoplay=1&mute=1" title="ArUco detection and approach" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Pick and Place
 ________________________
