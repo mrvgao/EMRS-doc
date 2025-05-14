@@ -171,7 +171,7 @@ In the next sections, we list all the executive packages and commands to run the
    * - Gazebo Simulation
      - Physics-based simulation in custom apartment and Wyman lab
    * - Hand-Eye Calibration
-     - (leave empty or describe)
+     - Hand-Eye Calibration done same as in ASBR
    * - SLAM
      - Real-time mapping and localization
    * - Patrol
