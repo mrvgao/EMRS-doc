@@ -118,6 +118,39 @@ _____________________
     matlab -nodisplay -nodesktop -r "run('~/rsp_ws/src/rsp-project-team-emrs/hand_eye_calib/matlab/hand_eye_calib.mlx')"
 
 
+ArUco Detection and Approaching
+_____________________
+
+
+**Description**: The robot uses computer vision to detect ArUco markers attached to trash objects and navigates to optimal picking positions.
+**Detection System**:
+
+Primary detection with OAK-D camera mounted on the robot base
+Secondary precise detection with RealSense D435 on the arm for pick operations
+Real-time pose estimation of trash objects relative to the robot
+
+
+**Approaching Procedure**:
+
+During patrol, the robot scans the environment for ArUco markers
+Upon detection, the robot stops and calculates the optimal approach position
+Robot navigates to position itself within arm's reach of the trash object
+Fine positioning adjustments ensure the object is within the arm's workspace
+
+
+**Launch Commands**:
+
+.. code-block:: bash
+# Launch Navigation, Action servers for ArUco detection and approach node (on robot)
+ros2 launch turtlebot4_manipulator_navigation navigate.launch.py
+
+# Test approach to a specific marker ID (for testing)
+ros2 action send_goal /emrs/approach turtlebot4_trash_actions/action/Approach "{marker_frame: 'marker'}" \
+  --ros-args -r /tf:=/emrs/tf -r /tf_static:=/emrs/tf_static --remap __ns:=/emrs
+.. raw:: html
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/O27eazXY1Lk?autoplay=1&mute=1" title="ArUco detection and approach" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 Pick and Place
 ________________________
 - **Description**: MoveIt2-based pick-and-place functionality for trash collection.
